@@ -1,8 +1,8 @@
 /*remove the margin*/
 * {
         margin: 0px;
-        padding: 0px:
-        box-sizing: border-box;
+        padding: 0px；
+        /* box-sizing: border-box; */
 }
 
 
@@ -10,3 +10,119 @@
 body {
         font-family: 'Noto Sans', sans-serif;
 }
+
+header {
+        display: flex;  /*Move the elements in nav to the same line*/
+        /*background: lightblue;*/ /*Change the color so that I can see how it changed when I adjust it*/
+        width: 90%;
+        height: 10vh;
+        margin: auto;
+        align-items: center;
+}
+
+.logo-container, 
+.nav-links, 
+.cart {
+        display: flex;
+}
+
+.logo-container {
+        /*background: lightskyblue;*/
+        flex: 1;
+}
+/*调整class=logo-container下的img标签的样式*/
+.logo-container img {
+        height: 5vh;
+}
+.logo {
+        font-weight: 400;
+        margin: 5px;
+}
+nav {
+        /*background: lightgreen;*/
+        flex: 2;
+}
+.nav-links {
+        justify-content: space-around;
+        /*remove the dot in front of the nav-links elements*/
+        list-style: none;
+}
+.nav-link {
+        color: #5f5f79;
+        font-size: 18px;
+        /*取消下划线*/
+        text-decoration: none;
+}
+.cart {
+        /*background: lightcoral;*/
+        flex: 1;
+        /*把cart图标移到右边*/
+        justify-content: flex-end;
+}
+.cart img {
+        height: 5vh;
+}
+
+.presentation {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        min-height: 80vh;
+        align-items: center;
+}
+
+.introduction {
+        /*为了看到introduction所在的区域，方便调整*/
+        /*background: lightblue;*/
+        flex: 1;
+}
+
+.intro-text h1 {
+        font-size: 44px;
+        font-weight: 500;
+        background: linear-gradient(to right, #494964, #6f6f89);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+        margin-top: 5px;
+        font-size: 22px;
+        color: #585772;
+}
+
+.cta {
+        /*顺时针顺序：top right down left*/
+        padding: 50px 0px 0px 0px;
+}
+ /*给按钮增加样式表*/
+.cta-select{
+        border: 2px solid #c36cbb;
+        background: transparent;
+        color: #c36cbb;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+}
+
+.cta-add {
+        background: #c36cbb;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        color: white;
+        margin: 30px 0px 0px 30px;
+}
+
+.cover {
+        flex: 1;
+}
+
+.cover img {
+        height: 60vh;
+        /*add some shadow for image*/
+        /*filter: drop-shadow(0px 5px 3px black);*/
+}
+
