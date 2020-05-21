@@ -7,6 +7,7 @@
 h1 {
     margin-bottom: 30px;
     font-size: 1.75em;
+    text-align: center;
 }
 
 body {
@@ -14,12 +15,10 @@ body {
 }
 
 section {
-    border: 1px solid black;
-    padding: 5px;
+    border: 1px solid black; 
+    /* padding: 5px; */
     width: 100%;
     height: 100%;
-    margin-right: auto;
-    margin-left: auto;
     font-family: Helvetica;
     background-color: rgb(57, 57, 65);
     color: white;
@@ -29,8 +28,8 @@ section {
 
 .row {
     width: 100%;
-    border: 1px solid black;
-    background-color: rgb(73, 73, 134);
+    /* border: 1px solid black;
+    background-color: rgb(57, 57, 65); */
 }
 
 .item {
@@ -38,27 +37,27 @@ section {
 }
 
 .item-name {
-    background-color: rgb(111, 92, 165);
+    background-color: rgb(224, 187, 105);
+    text-align: center;
+    color: black;
     /*float: right;
     clear: both;*/
     width: 30%;
-    padding: 5px;
     border: 1px solid black;
     position: relative;
     left: 70%;
     font-size: 1.25em;
 }
 
-
-#line {
+/*
+#test {
     width: 50px;
     height: 50px;
     border: 1px solid black;
-    margin: 5px;
     background-color: antiquewhite;
     clear: left;
 }
-
+*/
 
 
 
@@ -66,8 +65,10 @@ section {
 @media (min-width: 992px) {
     .col-lg-4, .col-lg-6, .col-lg-12 {
         float: left;
-        border: 1px solid green;
-        padding: 0px, 1%;
+        /*border: 1px solid black;*/
+        /*background-color: rgb(57, 57, 65);*/
+        /* margin: 5px; */
+        padding: 10px;
     }
     .col-lg-4 {
         width: 33%;
@@ -84,8 +85,10 @@ section {
 @media (min-width: 768px) and (max-width: 991px) {
     .col-md-4, .col-md-6, .col-md-12 {
         float: left;
-        border: 1px solid green;
-        padding: 0px, 1%;
+        /*border: 1px solid black;*/
+        /*background-color: rgb(57, 57, 65);*/
+        /* margin: 5px; */
+        padding: 10px;
     }
     .col-md-4 {
         width: 33%;
@@ -102,8 +105,10 @@ section {
 @media (max-width: 767px) {
     .col-sm-4, .col-sm-6, .col-sm-12 {
         float: left;
-        border: 1px solid green;
-        padding: 0px, 1%;
+        /*border: 1px solid black;*/
+        /*background-color: rgb(57, 57, 65);*/
+        /* margin: 5px; */
+        padding: 10px;
     }
     .col-sm-4 {
         width: 33%;
