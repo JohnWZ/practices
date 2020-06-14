@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>quiz4</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <!-- form标签的action属性会将内部所有的信息打包发送到action指定的网页，不指定则默认发送给自己 -->
+        <!-- form标签不加method属性则默认method=get -->
+        <form action=""> 
+            <div>
+                <!-- label的for属性和input的id一致就可以connect它们 -->
+                <!-- name属性是用于在method=get的时候在search bar显示数据 -->
+                <label for="firstName">First name: </label>
+                <input type="text" name="FirstName" id="firstName" placeholder="John" required>
+
+                <label for="lastName">Last name: </label>
+                <input type="text" name="LastName" id="lastName" placeholder="Smith" required>
+            </div>
+            
+
+            <div>
+                <!-- 在radio里面，拥有相同name的radio只能同时有一个被选中 -->
+                <!-- value属性用于在method=get的时候在search bar显示选中的数据 -->
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="Male">
+
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="Female">
+
+                <label for="other">Other</label>
+                <input type="radio" name="gender" id="other" value="Other">
+            </div>
+            
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="Email" id="email" placeholder="Your email" required>
+    
+                <label for="password">Password: </label>
+                <!-- pattern用于限制长度，title显示提示消息 -->
+                <input type="password" id="password" pattern=".{5,10}" required title="5 to 10 characters">
+            </div>
+
+            <div>
+                <!-- fieldset可以把内部的所有元素圈起来，legend在这个圈上贴个名字 -->
+                <fieldset>
+                    <legend>Birthday:</legend>
+                    <!-- select是drop down menu, option是内置的选项 -->
+                    <!-- select的name和option的value都是用于在search bar显示所选信息的 -->
+                    <label for="month">Month:</label>
+                    <select name="month" id="month">
+                        <option value="month">Month</option>
+                        <option value="january">Jan</option>
+                        <option value="february">Feb</option>
+                        <option value="march">Mar</option>
+                        <option value="april">Apr</option>
+                    </select>
+                    
+                    <label for="day">Day:</label>
+                    <select name="day" id="day">
+                        <option value="day">Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    
+                    <label for="year">Year:</label>
+                    <select name="year" id="year">
+                        <option value="year">Year</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                    </select>
+                </fieldset>
+            </div>
+            
+
+            <div>
+                <label for="agreement">I agree to the terms and conditions </label>
+                <input type="checkbox" id="agreement" name="agreed">
+            </div>
+            
+
+            <div>
+                <!-- name可以将textarea里面的内容在search bar里面显示出来 -->
+                <textarea name="textarea" id="test" cols="30" rows="10">Write something here!</textarea>
+            </div>
+            
+            <input type="submit">
+        </form>
+    </body>
+</html>
