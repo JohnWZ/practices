@@ -31,7 +31,9 @@ p2button.addEventListener("click", function(){
     p2display.textContent = p2score;
 });
 
-reset.addEventListener("click", function(){
+resetButton.addEventListener("click", reset);
+
+function reset() {
     p1score = 0;
     p2score = 0;
     p1display.textContent = 0;
@@ -41,8 +43,15 @@ reset.addEventListener("click", function(){
     p2display.classList.remove("winner");
 
     gameOver = false;
-});
+}
 
 numInput.addEventListener("change", function(){
-    //
+    goal = Number(numInput.value);
+    if (goal < 1) {
+        goal = 1;
+    }
+    document.querySelector("#goal").textContent = goal;
+    // set the game back to 0 to 0 whenevery we set the max score
+    reset();
 });
+
