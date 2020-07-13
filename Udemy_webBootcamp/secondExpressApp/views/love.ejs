@@ -1,0 +1,11 @@
+<%- include ("partials/header") %>
+    <!-- whatever insight of the <%= %> (called ejs tags )will be treated as javascript -->
+    <!-- thingVar 是从app.js中传递过来的参数 -->
+    <h1>You fell in love with: <%= thingVar %> </h1>
+    <% if(thingVar.toLowerCase() === "rusty") { %>
+        <p>Good choice!</p>
+    <% } else { %>
+        <p>Bad choice!</p>
+    <% } %>
+    <p>P.S. This is the love.ejs</p>
+<%- include ("partials/footer") %>

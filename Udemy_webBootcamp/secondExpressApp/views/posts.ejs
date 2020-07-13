@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<h1>This is the post page!</h1>
+<!-- <%= %> will evaluate the js and take the return value, then render to the HTML.
+<% %> will just run the code. -->
+<% for(var i=0; i<posts.length; i++) { %>
+    <li>
+        <%= posts[i].title %> - <strong><%= posts[i].author%></strong>
+    </li>
+<% } %>
+
+<hr>
+
+<% posts.forEach(function(post) { %>
+    <li>
+        <%= post.title %> - <strong><%= post.author%></strong>
+    </li>
+<% }) %>
+
+<%- include ("partials/footer.ejs") %>
