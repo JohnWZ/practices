@@ -8,21 +8,25 @@ app.use(bodyParser.urlencoded({extended: true}));
 //使路由中所有的文件默认后缀为ejs
 app.set("view engine", "ejs");
 
+// 创建一个friends数组存储数据，以后会用数据库取代
 var friends = ["Adam", "Bill", "Candy", "Dell"];
 
+// home(root) page
 app.get("/", function(req, res){
     res.render("home");
 });
 
+// made /friend page, pass friends list to it for later use
 app.get("/friends", function(req, res){
     res.render("friends", {friends: friends});
 });
 
-// we use post when we want to add data to database
+// use post when we want to add data to database(本次暂时用数组取代database)
 app.post("/addFriend", function(req, res){
     // get the value inside the form
     // console.log(req.body.newFriend);
     var newFriend = req.body.newFriend;
+    // push it into the friends array
     friends.push(newFriend);
     // res.send("You have reached the post route");
     // redirect to the /friends page
