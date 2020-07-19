@@ -8,13 +8,14 @@ app.get("/", function(req, res){
     res.render("search");
 });
 
+// 在test文件中打印出完整的JSON文件方便查看
 app.get("/test", function(req, res){
     var url = "http://www.omdbapi.com/?s=test&apikey=thewdb"
     request(url, function(error, response, body){
             if (!error && response.statusCode == 200) {
             // 将string的body转成Json格式
             var bodyData = JSON.parse(body);
-            // 可以试试将整个body(converted to results)打印出来
+            // 可以试试将整个body(converted to bodyData)打印出来
             // 将返回的结果(Json文件)用Json viewer打开
             res.send(bodyData);
             //res.send(bodyData["Search"][0]["Title"]);
