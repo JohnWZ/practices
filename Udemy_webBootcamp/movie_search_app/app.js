@@ -26,7 +26,7 @@ app.get("/results", function(req, res){
     // 获取url中inputMovieName的值
     var movieQuery = req.query.inputMovieName;
     // you must append &apikey=thewdb to the end of the url to Search with Movie ID
-    // `http://www.omdbapi.com/?s=${query}&apikey=thewdb`
+    // 下面的URL也可以使用这个替代`http://www.omdbapi.com/?s=${query}&apikey=thewdb`
     var url = "http://www.omdbapi.com/?s=" + movieQuery + "&apikey=thewdb";
     
     request(url, function(error, response, body){
