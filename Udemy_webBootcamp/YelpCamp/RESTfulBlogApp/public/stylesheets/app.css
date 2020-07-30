@@ -1,0 +1,8 @@
+i.icon {
+    /* make every icon 1.5 times of its parent size */
+    /* font-size: 1.5em; */
+}
+
+.main.container {
+    margin-top: 7em;
+}
