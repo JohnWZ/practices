@@ -14,7 +14,7 @@ var postSchema = new mongoose.Schema({
 });
 var Post = mongoose.model("Post", postSchema);
 
-// USER - email, name
+// USER - email, name, posts
 var userSchema = new mongoose.Schema({
     email: String,
     name: String,

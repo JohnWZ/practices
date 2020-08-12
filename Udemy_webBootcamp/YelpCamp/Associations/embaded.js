@@ -14,7 +14,7 @@ var postSchema = new mongoose.Schema({
 });
 var Post = mongoose.model("Post", postSchema);
 
-// USER - email, name
+// USER - email, name, posts
 var userSchema = new mongoose.Schema({
     email: String,
     name: String,
@@ -61,10 +61,12 @@ User.findOne({name: "pual"}, function(err, user){
     if (err) {
         console.log(err);
     } else {
+        // if no error thrown out, make a new post
         user.posts.push({
             title: "I really hate it sometimes.",
-            content: "Is there any way to get out of this?"
+            content: "Is there any way to get ride of this?"
         });
+        // save it afterwards, inorder to save it into the database
         user.save(function(err, user){
             if (err) {
                 console.log(err);
