@@ -9,6 +9,6 @@ var userSchema = new mongoose.Schema({
         ref: "Post"
     }]
 });
-var User = mongoose.model("User", userSchema);
+// var User = mongoose.model("User", userSchema);
 
-module.exports = User;
+module.exports = mongoose.model("User", userSchema);
