@@ -61,12 +61,12 @@ User.findOne({name: "pual"}, function(err, user){
     if (err) {
         console.log(err);
     } else {
-        // if no error thrown out, make a new post
+        // if no error thrown out, push a new post
         user.posts.push({
             title: "I really hate it sometimes.",
             content: "Is there any way to get ride of this?"
         });
-        // save it afterwards, inorder to save it into the database
+        // save it into the database
         user.save(function(err, user){
             if (err) {
                 console.log(err);
